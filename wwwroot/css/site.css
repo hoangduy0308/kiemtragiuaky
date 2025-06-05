@@ -1,0 +1,89 @@
+/* ===== Font & Layout Defaults ===== */
+html {
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+/* ===== Button Style Enhancements ===== */
+.btn {
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Focus Styles */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* ===== Table Enhancements ===== */
+.table th {
+  background-color: #0d6efd;
+  color: white;
+  vertical-align: middle;
+}
+
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ===== Form & Input ===== */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  padding: 6px;
+}
+
+/* ===== Image Style ===== */
+img {
+  border-radius: 8px;
+  max-height: 100px;
+  object-fit: cover;
+  padding: 4px;
+  border: 1px solid #ddd;
+}
+
+
+/* ===== Navbar Branding ===== */
+.navbar-brand {
+  font-weight: bold;
+  color: #0d6efd !important;
+  font-size: 20px;
+}
+
+/* ===== Footer Style ===== */
+footer.footer {
+  background-color: #f1f1f1;
+  padding: 15px 0;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}

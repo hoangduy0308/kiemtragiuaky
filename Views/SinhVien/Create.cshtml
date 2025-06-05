@@ -1,0 +1,52 @@
+@model MyMvcApp.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Thêm sinh viên";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4">Thêm sinh viên mới</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="needs-validation">
+        <div class="mb-3">
+            <label asp-for="MaSV" class="form-label"></label>
+            <input asp-for="MaSV" class="form-control" />
+            <span asp-validation-for="MaSV" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="HoTen" class="form-label"></label>
+            <input asp-for="HoTen" class="form-control" />
+            <span asp-validation-for="HoTen" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="GioiTinh" class="form-label"></label>
+            <select asp-for="GioiTinh" class="form-select">
+                <option value="">-- Chọn giới tính --</option>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="NgaySinh" class="form-label"></label>
+            <input asp-for="NgaySinh" class="form-control" type="date" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Chọn ảnh</label>
+            <input type="file" name="file" class="form-control" />
+        </div>
+        <div class="mb-3">
+    <label asp-for="MaNganh" class="form-label">Ngành học</label>
+    <select asp-for="MaNganh" class="form-select" asp-items="ViewBag.DanhSachNganh">
+        <option value="">-- Chọn ngành học --</option>
+    </select>
+    <span asp-validation-for="MaNganh" class="text-danger"></span>
+</div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success me-2">Lưu</button>
+            <a class="btn btn-secondary" href="/SinhVien">Hủy</a>
+        </div>
+    </form>
+</div>

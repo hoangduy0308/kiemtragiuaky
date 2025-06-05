@@ -1,0 +1,35 @@
+@model MyMvcApp.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Thông tin chi tiết sinh viên";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <h2 class="mb-4">Thông tin chi tiết sinh viên</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Mã sinh viên</dt>
+        <dd class="col-sm-9">@Model.MaSV</dd>
+
+        <dt class="col-sm-3">Họ tên</dt>
+        <dd class="col-sm-9">@Model.HoTen</dd>
+
+        <dt class="col-sm-3">Giới tính</dt>
+        <dd class="col-sm-9">@Model.GioiTinh</dd>
+
+        <dt class="col-sm-3">Ngày sinh</dt>
+        <dd class="col-sm-9">@Model.NgaySinh.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-3">Hình ảnh</dt>
+        <dd class="col-sm-9">
+            <img src="~/images/@Model.Hinh" width="150" />
+        </dd>
+
+        <dt class="col-sm-3">Mã ngành</dt>
+        <dd class="col-sm-9">@Model.MaNganh</dd>
+    </dl>
+
+    <a class="btn btn-secondary" href="/SinhVien">Quay lại danh sách</a>
+</div>
